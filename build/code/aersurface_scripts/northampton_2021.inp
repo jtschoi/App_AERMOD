@@ -1,15 +1,50 @@
-AERSURFACE
- LOCATION LATITUDE 40.691957 LONGITUDE -75.479887
- LANDUSEFILE D:/Columbia/CPU_computing/App_AERMOD/build/data/landcover_mrlc/Annual_NLCD_LndCov_2016_CU_C1V0.tif
- REGION 1
- SEASONWINTER AVERAGE
- SEASONSPRING AVERAGE
- SEASONSUMMER AVERAGE
- SEASONFALL   AVERAGE
- MOISTUREWINTER AVERAGE
- MOISTURESPRING AVERAGE
- MOISTURESUMMER AVERAGE
- MOISTUREFALL   AVERAGE
- YEAR 2021
- OUTPUTFILE D:/Columbia/CPU_computing/App_AERMOD/build/data/aersurface_outputfiles/surface_charac_northampton_2021.txt
-END
+** control file for Northampton
+
+CO STARTING
+   TITLEONE  Northampton 2021
+   TITLETWO  With tree cover and impervious
+
+** default options for some parameters
+   OPTIONS   PRIMARY  ZORAD
+   
+   DEBUGOPT  GRID  TIFF
+   
+   CENTERLL  40.691957   -75.479887   NAD83
+   
+   DATAFILE  NLCD2021  "D:\Columbia\CPU_computing\App_AERMOD\build\data\landcover_mrlc\NLCD_u6YjCrqG60KoOisGLSZo\Annual_NLCD_LndCov_2021_CU_C1V0_u6YjCrqG60KoOisGLSZo.tiff"
+   DATAFILE  NLCD2021  "D:\Columbia\CPU_computing\App_AERMOD\build\data\landcover_mrlc\NLCD_u6YjCrqG60KoOisGLSZo\Annual_NLCD_LndCov_2021_CU_C1V0_u6YjCrqG60KoOisGLSZo.tiff"
+
+** Radius available is between 0.5 to 5km; sticking with 1km
+   ZORADIUS  1.0
+
+   CLIMATE   AVERAGE  NOSNOW   NONARID
+  
+** Monthly values for 12 sectors, equally fractioned
+   FREQ_SECT   MONTHLY   12  VARYAP
+   
+   SECTOR   1   345.00   15.00   NONAP
+   SECTOR   2    15.00   45.00   NONAP
+   SECTOR   3    45.00   75.00   NONAP
+   SECTOR   4    75.00  105.00   NONAP
+   SECTOR   5   105.00  135.00   NONAP
+   SECTOR   6   135.00  165.00   NONAP
+   SECTOR   7   165.00  195.00   NONAP
+   SECTOR   8   195.00  225.00   NONAP
+   SECTOR   9   225.00  255.00   NONAP
+   SECTOR  10   255.00  285.00   NONAP
+   SECTOR  11   285.00  315.00   NONAP
+   SECTOR  12   315.00  345.00   NONAP
+   
+** Default case is continuous snow cover in January; modified
+   SEASON   WINTERNS   12 1 2 3
+   SEASON   SPRING     4 5
+   SEASON   SUMMER     6 7 8
+   SEASON   AUTUMN     9 10 11
+   
+   RUNORNOT  RUN
+CO FINISHED
+
+OU STARTING
+   SFCCHAR   "surface_charac_northampton.txt"
+   NLCDGRID  "landcover_grid_northampton.txt"
+OU FINISHED
