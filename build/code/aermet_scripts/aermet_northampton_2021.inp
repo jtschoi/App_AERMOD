@@ -1,0 +1,38 @@
+JOB
+
+    REPORT    NORTHAMPTON_2021_AERMET_REPORT.TXT
+    MESSAGES  NORTHAMPTON_2021_AERMET_MESSAGE.TXT
+    DEBUG     NORTHAMPTON_2021_AERMET_DEBUG.TXT
+
+SURFACE
+
+    DATA      D:\Columbia\EmissionsBitcoin\build\data\aermet\isd\closest_to_northampton\SURFACE_NH_2021.ISD   ISHD
+    ASOS1MIN  D:\Columbia\CPU_computing\App_AERMOD\build\data\aerminute_outputfiles\closest_to_northampton\KABE_202109_202112.AMU
+    EXTRACT   NORTHAMPTON_2021_SURFACE_EXTRACT.TXT
+    QAOUT     NORTHAMPTON_2021_SURFACE_QAOUT.TXT
+
+    XDATES    2021/09/01 TO 2021/12/31
+    LOCATION  14737  40.65N  75.448W  5.0  117.4
+
+UPPERAIR
+
+    DATA      D:\Columbia\EmissionsBitcoin\build\data\aermet\igra\closest_to_northampton\USM00072501-data.txt   IGRA
+    EXTRACT   NORTHAMPTON_2021_UPPER_EXTRACT.TXT
+    QAOUT     NORTHAMPTON_2021_UPPER_QAOUT.TXT
+
+    XDATES    2021/09/01 TO 2021/12/31
+    LOCATION  72501  40.865N  72.8628W  5.0  19.6
+
+METPREP
+
+    MODEL     AERMOD
+    XDATES    2021/09/01 TO 2021/12/31
+    METHOD    REFLEVEL  SUBNWS
+    METHOD    WIND_DIR  RANDOM
+    METHOD    STABLEBL  ADJ_U*
+    METHOD    CCVR      SUB_CC
+    METHOD    TEMP      SUB_TT
+    NWS_HGT   WIND      10.0
+    AERSURF   D:\Columbia\CPU_computing\App_AERMOD\build\data\aersurface_outputfiles\surface_charac_northampton_2021.txt
+    OUTPUT    NORTHAMPTON_2021_AERMET.SFC
+    PROFILE   NORTHAMPTON_2021_AERMET.PFL

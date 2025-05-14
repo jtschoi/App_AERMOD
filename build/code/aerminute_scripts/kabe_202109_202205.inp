@@ -1,0 +1,14 @@
+STARTEND 9 2021 12 2021
+
+IFWGROUP Y 9 1 2021
+
+DATAFILE STARTING
+D:\Columbia\EmissionsBitcoin\build\data\aermet\asos1min\closest_to_northampton\asos-1min-pg1-KABE-202109.dat.txt
+D:\Columbia\EmissionsBitcoin\build\data\aermet\asos1min\closest_to_northampton\asos-1min-pg1-KABE-202110.dat.txt
+D:\Columbia\EmissionsBitcoin\build\data\aermet\asos1min\closest_to_northampton\asos-1min-pg1-KABE-202111.dat.txt
+D:\Columbia\EmissionsBitcoin\build\data\aermet\asos1min\closest_to_northampton\asos-1min-pg1-KABE-202112.dat.txt
+DATAFILE FINISHED
+
+OUTFILES STARTING
+HOURFILE D:\Columbia\CPU_computing\App_AERMOD\build\data\aerminute_outputfiles\closest_to_northampton\KABE_202109_202112.AMU
+OUTFILES FINISHED

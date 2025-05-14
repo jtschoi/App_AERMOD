@@ -12,7 +12,6 @@ CO STARTING
    CENTERLL  40.691957   -75.479887   NAD83
    
    DATAFILE  NLCD2021  "D:\Columbia\CPU_computing\App_AERMOD\build\data\landcover_mrlc\NLCD_u6YjCrqG60KoOisGLSZo\Annual_NLCD_LndCov_2021_CU_C1V0_u6YjCrqG60KoOisGLSZo.tiff"
-   DATAFILE  CNPY2021  "D:\Columbia\CPU_computing\App_AERMOD\build\data\landcover_mrlc\NLCD_u6YjCrqG60KoOisGLSZo\nlcd_tcc_conus_2021_unpacked.tiff"
    DATAFILE  MPRV2021  "D:\Columbia\CPU_computing\App_AERMOD\build\data\landcover_mrlc\NLCD_u6YjCrqG60KoOisGLSZo\Annual_NLCD_FctImp_2021_CU_C1V0_u6YjCrqG60KoOisGLSZo.tiff"
 
 ** Radius available is between 0.5 to 5km; sticking with 1km
@@ -46,6 +45,7 @@ CO STARTING
 CO FINISHED
 
 OU STARTING
-   SFCCHAR   "surface_charac_northampton.txt"
-   NLCDGRID  "landcover_grid_northampton.txt"
+   SFCCHAR   "surface_charac_northampton_2021.txt"
+   NLCDGRID  "landcover_grid_northampton_2021.txt"
+   MPRVGRID  "impervious_grid_northampton_2021.txt"
 OU FINISHED

@@ -1,0 +1,6 @@
+When asked "Enter the 1st Standard Parallel": type 29.5
+When asked "Enter the 2nd Standard Parallel": type 45.5
+When asked "Enter the Central Meridian": type -96.0
+When asked "Enter the Latitude of Projection Origin": type 23.0
+When asked "False Easting": 0
+When asked "False Northing": 0
